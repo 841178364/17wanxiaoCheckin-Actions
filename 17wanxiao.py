@@ -217,17 +217,17 @@ def check_in(username, password):
     post_dict = get_post_json(json1)
     if post_dict:
         # 健康打卡
-         print(post_dict)
+        print(post_dict)
 
         # 修改温度等参数
-         for j in post_dict['updatainfo']:  # 这里获取打卡json字段的打卡信息，微信推送的json字段
+        for j in post_dict['updatainfo']:  # 这里获取打卡json字段的打卡信息，微信推送的json字段
              if j['propertyname'] == 'temperature':  # 找到propertyname为temperature的字段
                  j['value'] = '36.2'  # 由于原先为null，这里直接设置36.2（根据自己学校打卡选项来）
              if j['propertyname'] == '举一反三即可':
                  j['value'] = '举一反三即可'
 
          #修改地址，依照自己完美校园，查一下地址即可
-         post_dict['areaStr'] = '{"streetNumber":"89号","street":"建设东路","district":"","city":"新乡市","province":"河南省",' \
+        post_dict['areaStr'] = '{"streetNumber":"89号","street":"建设东路","district":"","city":"新乡市","province":"河南省",' \
                                 '"town":"","pois":"河南师范大学(东区)","lng":113.91572178314209,' \
                                 '"lat":35.327695868943984,"address":"牧野区建设东路89号河南师范大学(东区)","text":"河南省-新乡市",' \
                                 '"code":""} '
@@ -267,7 +267,7 @@ def check_in(username, password):
     return check_dict_list
 
 
-def server_push(sckey, desp):
+def server_push(sckey, desp):0
     send_url = f"https://sc.ftqq.com/{sckey}.send"
     params = {
         "text": "健康打卡推送通知",
