@@ -230,7 +230,7 @@ def check_in(username, password):
          post_dict['areaStr'] = '{"streetNumber":"89号","street":"建设东路","district":"","city":"新乡市","province":"河南省",' \
                                 '"town":"","pois":"河南师范大学(东区)","lng":113.91572178314209,' \
                                 '"lat":35.327695868943984,"address":"牧野区建设东路89号河南师范大学(东区)","text":"河南省-新乡市",' \
-                                '"code":""} 
+                                '"code":""} '
         healthy_check_dict = healthy_check_in(username, token, post_dict)
         check_dict_list.append(healthy_check_dict)
     else:
