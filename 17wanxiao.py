@@ -226,7 +226,7 @@ def check_in(username, password):
             if j['propertyname'] == '举一反三即可':
                 j['value'] = '举一反三即可'
 
-         #修改地址，依照自己完美校园，查一下地址即可
+        # 修改地址，依照自己完美校园，查一下地址即可
         post_dict['areaStr'] = '{"streetNumber":"89号","street":"建设东路","district":"","city":"新乡市","province":"河南省",' \
                                 '"town":"","pois":"河南师范大学(东区)","lng":113.91572178314209,' \
                                 '"lat":35.327695868943984,"address":"牧野区建设东路89号河南师范大学(东区)","text":"河南省-新乡市",' \
@@ -267,7 +267,7 @@ def check_in(username, password):
     return check_dict_list
 
 
-def server_push(sckey, desp):0
+def server_push(sckey, desp):
     send_url = f"https://sc.ftqq.com/{sckey}.send"
     params = {
         "text": "健康打卡推送通知",
@@ -382,7 +382,6 @@ def run():
 ```
 {json.dumps(check['check_json'], sort_keys=True, indent=4, ensure_ascii=False)}
 ```
-
 ------
 | Text                           | Message |
 | :----------------------------------- | :--- |
@@ -395,7 +394,6 @@ def run():
 ```
 {date}天
 ```
-
 >
 > [GitHub项目地址](https://github.com/ReaJason/17wanxiaoCheckin-Actions)
 >
